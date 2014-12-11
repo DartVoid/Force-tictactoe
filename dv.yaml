@@ -1,0 +1,19 @@
+# ------------------- Auto generated dv.yaml --------------------
+# Server urls will be routed to your Dart server (bin/server.dart)
+# Here we use the default match setting of "regex" (regex expression) for the server urls
+server:
+- url: /rest
+- url: /ws
+
+# Client urls will be routed to your Nginx instance serving your client from the "web" dir.
+# Here we use the match setting of "postregex" for the client url, meaning that the
+# "regex" urls will be checked first, then this url (also as a regex expression)
+#
+client:
+- url: /
+  match: postregex
+  dir: web
+
+# For more information about dv.yaml syntax, please see: http://www.dartvoid.com/docs/config/
+# ---------------------------------------------------------------
+
